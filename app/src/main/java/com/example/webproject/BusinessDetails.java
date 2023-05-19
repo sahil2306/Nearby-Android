@@ -197,7 +197,7 @@ public class BusinessDetails extends AppCompatActivity {
             if(loc.getVisibility() == View.VISIBLE){
                 //TODO : Get Location from Google Maps API
                 Log.d("----Manual----", key+dist+category+location);
-                String url = "https://maps.googleapis.com/maps/api/geocode/json?address="+location+"&key=AIzaSyA_otX4f6baUsNgx0M7yb4H1gh2umthoMc";
+                String url = "https://maps.googleapis.com/maps/api/geocode/json?address="+location+[API_KEY];
                 RequestQueue requestQueue = Volley.newRequestQueue(this);
 
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
@@ -220,7 +220,7 @@ public class BusinessDetails extends AppCompatActivity {
             }
             else{
                 //TODO: Get Location from IPInfo API
-                String url = "https://ipinfo.io/json?token=832860e713b67f";
+                String url = "https://ipinfo.io/json?token=+[API_KEY]";
 
                 RequestQueue requestQueue = Volley.newRequestQueue(this);
                 JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(
